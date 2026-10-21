@@ -1,0 +1,15 @@
+.logo{display:flex;align-items:center;gap:12px;color:#fff;}
+.logo-mark{width:38px;height:38px;flex-shrink:0;}
+.logo-text{font-family:'Oswald',sans-serif;font-weight:700;font-size:17px;line-height:1.15;letter-spacing:.03em;}
+.logo-text span{display:block;color:var(--blue-glow);}
+@media(max-width:400px){
+  .logo-text{font-size:14px;}
+  .logo-mark{width:32px;height:32px;}
+}
+
+/* Logo em imagem (quando COMPANY.logo está preenchido) */
+.logo-img{height:60px;width:auto;max-width:220px;object-fit:contain;filter:brightness(0) invert(1);}
+footer .logo-img{height:52px;max-width:260px;}
+@media(max-width:400px){
+  .logo-img{height:38px;max-width:170px;}
+}

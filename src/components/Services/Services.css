@@ -1,0 +1,52 @@
+/* ---------- SERVICES ---------- */
+.services{padding:110px 0 100px;background:var(--gray-50);}
+.services-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:48px;flex-wrap:wrap;}
+.services-head h2{font-size:clamp(26px,3vw,36px);color:var(--navy-950);max-width:560px;}
+@media(max-width:640px){
+  .services{padding:70px 0 60px;}
+  .services-head{margin-bottom:32px;}
+  .sv-track-outer{margin:0 -20px;padding:0 20px;}
+  .sv-card{flex:0 0 78vw;}
+}
+.services-arrows{display:flex;gap:8px;}
+.sv-arrow{
+  width:44px;height:44px;display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--gray-100);background:#fff;color:var(--navy-950);transition:all .2s;
+}
+.sv-arrow:hover{background:var(--blue-500);color:#fff;border-color:var(--blue-500);}
+.sv-arrow svg{width:18px;height:18px;}
+.sv-arrow:disabled{opacity:.35;pointer-events:none;}
+
+.sv-track-outer{overflow:hidden;cursor:grab;margin:0 -40px;padding:0 40px;}
+.sv-track-outer.dragging{cursor:grabbing;}
+.sv-track{
+  display:flex;gap:22px;
+  scroll-snap-type:x proximity;
+  overflow-x:auto;scrollbar-width:none;
+  padding-bottom:6px;
+}
+.sv-track::-webkit-scrollbar{display:none;}
+.sv-card{
+  flex:0 0 300px;scroll-snap-align:start;
+  background:#fff;border:1px solid var(--gray-100);
+  display:flex;flex-direction:column;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+}
+.sv-card:hover{transform:translateY(-6px);box-shadow:0 24px 50px -20px rgba(10,20,40,.25);}
+.sv-art{
+  position:relative;height:190px;overflow:hidden;
+  background:linear-gradient(135deg,var(--navy-900),var(--navy-800));
+}
+.sv-art img{width:100%;height:100%;object-fit:cover;}
+.sv-badge{
+  position:absolute;top:16px;left:16px;width:44px;height:44px;
+  background:#fff;display:flex;align-items:center;justify-content:center;
+  border-radius:50%;
+}
+.sv-badge svg{width:22px;height:22px;color:var(--blue-500);}
+.sv-body{padding:24px;flex:1;display:flex;flex-direction:column;}
+.sv-body h3{font-size:16.5px;color:var(--navy-950);margin-bottom:10px;font-weight:600;}
+.sv-body p{font-size:14px;line-height:1.6;color:var(--gray-600);margin-bottom:18px;flex:1;}
+.sv-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--blue-500);text-transform:uppercase;letter-spacing:.03em;}
+.sv-link svg{width:14px;height:14px;transition:transform .2s;}
+.sv-card:hover .sv-link svg{transform:translateX(4px);}

@@ -1,0 +1,15 @@
+/* ---------- ISO 9001 ---------- */
+.iso{
+  margin-top:22px;display:grid;grid-template-columns:auto 1.2fr 1fr;gap:40px;align-items:center;
+  padding:36px 40px;
+  border:1px solid rgba(94,179,255,.3);
+  background:linear-gradient(120deg,rgba(34,119,229,.16),rgba(255,255,255,.02) 65%);
+}
+.iso-seal{width:132px;height:132px;flex-shrink:0;}
+.iso-copy h4{font-size:26px;font-weight:600;margin-bottom:10px;}
+.iso-copy p{color:rgba(255,255,255,.68);font-size:14.5px;line-height:1.75;}
+.iso .eyebrow{margin-bottom:10px;}
+@media(max-width:980px){
+  .iso{grid-template-columns:1fr;gap:24px;padding:30px 24px;justify-items:start;}
+  .iso-seal{width:104px;height:104px;}
+}
